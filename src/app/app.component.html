@@ -1,40 +1,47 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Services</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            Dropdown
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
       </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
-<div class="container mx-auto">
+<div class="container mx-auto my-5">
   <section>
-    <div class="row">
+    <div class="row gap-4">
       <div class="col pt-5">
-        <h2 class="mt-5 pt-5 mb-4">
+        <h2 class="mt-5 mb-4">
           dummy Heading
         </h2>
         <p class="mb-5">
@@ -53,6 +60,85 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAhFBMVEUAAAD///8lJSV/f3+SkpL09PTx8fHm5ub39/ft7e3Z2dmsrKylpaXLy8tfX1/8/PzU1NScnJy4uLhUVFTCwsKysrIbGxtBQUGLi4ssLCy8vLxnZ2d0dHRNTU3g4OBZWVk1NTVFRUUzMzMPDw+NjY1lZWV4eHiDg4MgICCWlpYUFBROTk4IfdW+AAAESklEQVR4nO3YaZeiOhAGYAplB1ld0BaxXbp1/v//G0IgKbDnzOXc6aMz532+iAGRFEmlwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgnzUrHNuJwrVquGSVW2137BAzSCwvuk0/t5nl+sspjWwvSvn+j8Kx/Gw9/tmT7SyK0lu69OguG1YV+eEt9Mkx+2NCsoNbuiV6m3p2h2Zq+0zu8pZmMW36ln3736FHxf/qwp/2RsWn3Fqf5KdnyVu7d93umIDmciOaGpSAdEzmFMqNZR+UI1VldxHJ5Av/Pmtajloy6kdyTdv280Jq0iTWasrZd/SmYlLrfyqobj99r29502Pn+SJ71GD2d7ORUi0+fEe1rPsR8598NudSMSlivUOGZ0c6ZT1cx/PsaTdqSYl9IZEPS/rQLUk14eyR14S4jwmLtZFZ3W5lQYsJJ/5WqTtu8fnMjsQI2dC7brlSqb/kZ3bsO+uzdGuOVTHZ0Z79sI1AzH9hZ5Mu/BtVbcJf1eWpb4kDtjuwmvatxVpyfj/npINixs4o1exFOFRMBuPPFEOvHCRs/1Wy7MmeG6vUcYnsQva1HCSMmci3g+nyHvP9Z3W0GVcnY8gT8VYxyVg6af53OZ4uSx75Z6rpkJOzORzzWSXn+3GQYHI6NCXGoHiw+ThSQSldxxjZ2qLeUTGJfL7Tj8Q05KXanI+jZ8pppu70rU2oOf1g+4/iVtqD1drbDs5wbqeP+RiSC7VVjoqJiIKWNBH6iE3WsnmVmBxIlx5NYWKOUqEcNTQYGaOYNH05i1wyPnNJsoRXMXEeYpK+akx4Z0TVMHWciM7c3McF2u+myt84TvhyKJLpMJ8cfpdPhJC8cVPT1vX3F/mkesgnt1eJSc7LsebhZOq6I5SW91DcHlRkV3/dunMkXnWJmBgxnym/qU8EseJsRkG520m+kHaUHhaXelSflLI+ubKmF6pPePXY3kqfj4q2jj3zMX7lRa1hdOl1FJSaRuYieR/0AV0dy8P/OnVsxHOsJdLnvH+NIrRdXfFn1mSQFpp7LUP48ctnQ1Ws8uVr2z7xFSwPXQa5/amudFHbi3Ys3x+fixMduOOw72Xcj6rx9OnpZ8Ds4bl4wYr7F3ouNhydLBx5WYEa5MfujQdbnSqPV/B1rCfahgbvFHs6JqV+mRbF8kEysfrVeMZexz3dnio5aI8OHWVTFctF4xL3YzvtgvLp86TQtPOZd/a+et2kY9L0W6aMU9GPj9pyZKravNbLx7VNVRAGDjl113IvyAnCpcfeB87JzcIwITcf/njw2Hc3vmCy1f5KVIRhRLoEWotXv2Fm0UPR82S7ZeQnS97bfZD4UcArqlPaHJNNfkPdBCrkufNc+Ml2MEt2WfNX6ZfhBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH/LT3k9Mtug7gt+AAAAAElFTkSuQmCC"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAhFBMVEUAAAD///8lJSV/f3+SkpL09PTx8fHm5ub39/ft7e3Z2dmsrKylpaXLy8tfX1/8/PzU1NScnJy4uLhUVFTCwsKysrIbGxtBQUGLi4ssLCy8vLxnZ2d0dHRNTU3g4OBZWVk1NTVFRUUzMzMPDw+NjY1lZWV4eHiDg4MgICCWlpYUFBROTk4IfdW+AAAESklEQVR4nO3YaZeiOhAGYAplB1ld0BaxXbp1/v//G0IgKbDnzOXc6aMz532+iAGRFEmlwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgnzUrHNuJwrVquGSVW2137BAzSCwvuk0/t5nl+sspjWwvSvn+j8Kx/Gw9/tmT7SyK0lu69OguG1YV+eEt9Mkx+2NCsoNbuiV6m3p2h2Zq+0zu8pZmMW36ln3736FHxf/qwp/2RsWn3Fqf5KdnyVu7d93umIDmciOaGpSAdEzmFMqNZR+UI1VldxHJ5Av/Pmtajloy6kdyTdv280Jq0iTWasrZd/SmYlLrfyqobj99r29502Pn+SJ71GD2d7ORUi0+fEe1rPsR8598NudSMSlivUOGZ0c6ZT1cx/PsaTdqSYl9IZEPS/rQLUk14eyR14S4jwmLtZFZ3W5lQYsJJ/5WqTtu8fnMjsQI2dC7brlSqb/kZ3bsO+uzdGuOVTHZ0Z79sI1AzH9hZ5Mu/BtVbcJf1eWpb4kDtjuwmvatxVpyfj/npINixs4o1exFOFRMBuPPFEOvHCRs/1Wy7MmeG6vUcYnsQva1HCSMmci3g+nyHvP9Z3W0GVcnY8gT8VYxyVg6af53OZ4uSx75Z6rpkJOzORzzWSXn+3GQYHI6NCXGoHiw+ThSQSldxxjZ2qLeUTGJfL7Tj8Q05KXanI+jZ8pppu70rU2oOf1g+4/iVtqD1drbDs5wbqeP+RiSC7VVjoqJiIKWNBH6iE3WsnmVmBxIlx5NYWKOUqEcNTQYGaOYNH05i1wyPnNJsoRXMXEeYpK+akx4Z0TVMHWciM7c3McF2u+myt84TvhyKJLpMJ8cfpdPhJC8cVPT1vX3F/mkesgnt1eJSc7LsebhZOq6I5SW91DcHlRkV3/dunMkXnWJmBgxnym/qU8EseJsRkG520m+kHaUHhaXelSflLI+ubKmF6pPePXY3kqfj4q2jj3zMX7lRa1hdOl1FJSaRuYieR/0AV0dy8P/OnVsxHOsJdLnvH+NIrRdXfFn1mSQFpp7LUP48ctnQ1Ws8uVr2z7xFSwPXQa5/amudFHbi3Ys3x+fixMduOOw72Xcj6rx9OnpZ8Ds4bl4wYr7F3ouNhydLBx5WYEa5MfujQdbnSqPV/B1rCfahgbvFHs6JqV+mRbF8kEysfrVeMZexz3dnio5aI8OHWVTFctF4xL3YzvtgvLp86TQtPOZd/a+et2kY9L0W6aMU9GPj9pyZKravNbLx7VNVRAGDjl113IvyAnCpcfeB87JzcIwITcf/njw2Hc3vmCy1f5KVIRhRLoEWotXv2Fm0UPR82S7ZeQnS97bfZD4UcArqlPaHJNNfkPdBCrkufNc+Ml2MEt2WfNX6ZfhBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH/LT3k9Mtug7gt+AAAAAElFTkSuQmCC"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAhFBMVEUAAAD///8lJSV/f3+SkpL09PTx8fHm5ub39/ft7e3Z2dmsrKylpaXLy8tfX1/8/PzU1NScnJy4uLhUVFTCwsKysrIbGxtBQUGLi4ssLCy8vLxnZ2d0dHRNTU3g4OBZWVk1NTVFRUUzMzMPDw+NjY1lZWV4eHiDg4MgICCWlpYUFBROTk4IfdW+AAAESklEQVR4nO3YaZeiOhAGYAplB1ld0BaxXbp1/v//G0IgKbDnzOXc6aMz532+iAGRFEmlwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgnzUrHNuJwrVquGSVW2137BAzSCwvuk0/t5nl+sspjWwvSvn+j8Kx/Gw9/tmT7SyK0lu69OguG1YV+eEt9Mkx+2NCsoNbuiV6m3p2h2Zq+0zu8pZmMW36ln3736FHxf/qwp/2RsWn3Fqf5KdnyVu7d93umIDmciOaGpSAdEzmFMqNZR+UI1VldxHJ5Av/Pmtajloy6kdyTdv280Jq0iTWasrZd/SmYlLrfyqobj99r29502Pn+SJ71GD2d7ORUi0+fEe1rPsR8598NudSMSlivUOGZ0c6ZT1cx/PsaTdqSYl9IZEPS/rQLUk14eyR14S4jwmLtZFZ3W5lQYsJJ/5WqTtu8fnMjsQI2dC7brlSqb/kZ3bsO+uzdGuOVTHZ0Z79sI1AzH9hZ5Mu/BtVbcJf1eWpb4kDtjuwmvatxVpyfj/npINixs4o1exFOFRMBuPPFEOvHCRs/1Wy7MmeG6vUcYnsQva1HCSMmci3g+nyHvP9Z3W0GVcnY8gT8VYxyVg6af53OZ4uSx75Z6rpkJOzORzzWSXn+3GQYHI6NCXGoHiw+ThSQSldxxjZ2qLeUTGJfL7Tj8Q05KXanI+jZ8pppu70rU2oOf1g+4/iVtqD1drbDs5wbqeP+RiSC7VVjoqJiIKWNBH6iE3WsnmVmBxIlx5NYWKOUqEcNTQYGaOYNH05i1wyPnNJsoRXMXEeYpK+akx4Z0TVMHWciM7c3McF2u+myt84TvhyKJLpMJ8cfpdPhJC8cVPT1vX3F/mkesgnt1eJSc7LsebhZOq6I5SW91DcHlRkV3/dunMkXnWJmBgxnym/qU8EseJsRkG520m+kHaUHhaXelSflLI+ubKmF6pPePXY3kqfj4q2jj3zMX7lRa1hdOl1FJSaRuYieR/0AV0dy8P/OnVsxHOsJdLnvH+NIrRdXfFn1mSQFpp7LUP48ctnQ1Ws8uVr2z7xFSwPXQa5/amudFHbi3Ys3x+fixMduOOw72Xcj6rx9OnpZ8Ds4bl4wYr7F3ouNhydLBx5WYEa5MfujQdbnSqPV/B1rCfahgbvFHs6JqV+mRbF8kEysfrVeMZexz3dnio5aI8OHWVTFctF4xL3YzvtgvLp86TQtPOZd/a+et2kY9L0W6aMU9GPj9pyZKravNbLx7VNVRAGDjl113IvyAnCpcfeB87JzcIwITcf/njw2Hc3vmCy1f5KVIRhRLoEWotXv2Fm0UPR82S7ZeQnS97bfZD4UcArqlPaHJNNfkPdBCrkufNc+Ml2MEt2WfNX6ZfhBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH/LT3k9Mtug7gt+AAAAAElFTkSuQmCC"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+<footer class="bg-dark text-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>About Us</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light">Home</a></li>
+          <li><a href="#" class="text-light">Services</a></li>
+          <li><a href="#" class="text-light">Contact</a></li>
+          <li><a href="#" class="text-light">About</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 
 <router-outlet />
